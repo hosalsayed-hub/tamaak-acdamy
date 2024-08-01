@@ -2,4 +2,5 @@
 
 require_relative 'config/environment'
  bundle config set frozen false
+
 run Rails.application
