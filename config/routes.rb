@@ -24,9 +24,10 @@ Rails.application.routes.draw do
   		patch :remove_review
     end
   end
+  get '/health_check', to: proc { [200, {}, ['success']] }
 
   resources :users, only: [:show, :index]
-
+  
   resources :lessons do
     put :sort
   end
