@@ -1,4 +1,4 @@
-bundle config set frozen false
+
 GEM
   remote: https://rubygems.org/
   specs:
