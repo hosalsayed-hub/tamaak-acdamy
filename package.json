@@ -1,7 +1,10 @@
 {
   "name": "suncalc",
   "private": true,
+  "build": "npm run generate-html && vite build",
+ "generate-html": "mkdir -p dist && cp index.html dist/",
   "dependencies": {
     "ntl": "^5.1.0"
   }
+  
 }
