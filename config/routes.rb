@@ -1,11 +1,34 @@
 Rails.application.routes.draw do
   get 'render/index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_for :users
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+   resources :categories
+
+  resources :courses do
+    get :created, :purchased, :published_unapproved, :pending_review, :latest, :top_rated, :popular, on: :collection
+    member do
+  		patch :approve
+  		patch :disapprove
+    end
+    resources :subscriptions, only: [:new, :create]
+    resources :lessons do
+      put :sort
+    end
+  end
+
+  resources :subscriptions do
+    get :my_students, on: :collection
+    member do
+  		patch :remove_review
+    end
+  end
+  get '/health_check', to: proc { [200, {}, ['success']] }
+
+  resources :users, only: [:show, :index]
+  
+  resources :lessons do
+    put :sort
+  end
   get "up" => "rails/health#show", as: :rails_health_check
-
-  # Defines the root path route ("/")
-  root "render#index"
+  root to: 'home#index'
 end
