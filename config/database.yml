@@ -1,19 +1,12 @@
 default: &default
   adapter: postgresql
-  encoding: unicode
-  host: localhost
-  username: postgres
-  password: 'Hos$7500'
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
-development:
-  <<: *default
-  database: suncalc_development
-
-test:
-  <<: *default
-  database: suncalc_test
+  encoding: utf8
+  pool: 5
 
 production:
   <<: *default
-  database: suncalc_development
+  host: tamaak-acdamy2
+  database: coursera_postgresql
+  username: coursera_postgresql_user
+  password: eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX
+  
