@@ -6,7 +6,7 @@ databases:
 
 services:
   - type: web
-    name: tamaak-acdamy2
+    name: postgres
     env: ruby
     buildCommand: "./render-build.sh"
     startCommand: "bundle exec rails s"
