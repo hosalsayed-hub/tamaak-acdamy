@@ -1,23 +1,19 @@
 databases:
-  - name: mysite
-    databaseName: suncalc_production
-    user: postgres
-    plan: free
+  - name: postgres
+    ipAllowList: []
+    databaseName: coursera-postgresql
+    user: coursera_postgresql_user
 
 services:
   - type: web
-    name: mysite
-    runtime: ruby
-    plan: free
-    buildCommand: "./bin/render-build.sh"
-    # preDeployCommand: "bundle exec rails db:migrate" # preDeployCommand only available on paid instance types
-    startCommand: "bundle exec rails server"
+    name: tamaak-acdamy2
+    env: ruby
+    buildCommand: "./render-build.sh"
+    startCommand: "bundle exec rails s"
     envVars:
-      - key: DATABASE_URL
+      - key: postgresql://coursera_postgresql_user:eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX@dpg-cqmm6btds78s73918e2g-a.oregon-postgres.render.com/coursera_postgresql
         fromDatabase:
-          name: mysite
+          name: postgres
           property: connectionString
-      - key: RAILS_MASTER_KEY
+      - key: ZM84xDUsTmjsihWTXCUgIcX+FCV0pjQg8qAnc2VlGJoiI24p1X5t2WIKcHtmCLJV3jveYapvt1srWLUg+zIhg9F4tNmyUR20Q1+CGqJx36ht20L02z4qjFsmpoEL3+5/bfSjLOTYh4jucjFGVWcBVOQQfebDXaxRdbgoG1aTahQYLVDwzJgnSGfqHpWwB2ELN0PlS9HVJzQd5JofR1VnN7kTGcP13eyH+fdSQsfEO7kfKtkeAnPD8BpdxMyzHgV+Llfrrj5vazCsglj4fG2IXDlChavKjspH+ynUue7ItQkLetWFi9AlZ6xLEL5Xv9/3yQMEzOV2rvj3bHe1ltw/uxGeCmMjbSJfRFVaizn7dwmxmgO0NHTgAHYMCtEbS+WoOlbfjnSJ2sibgVKJoE+3Qwbgf/lE9lgHuG21--ZUSjLKk4Blxq6Ntx--oELoURJtyZIeJXAvtjIa9Q==
         sync: false
-      - key: WEB_CONCURRENCY
-        value: 2 # sensible default
