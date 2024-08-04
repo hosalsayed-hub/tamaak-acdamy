@@ -1,12 +1,12 @@
 databases:
-  - name: dpg-cqmm6btds78s73918e2g-a
+  - name: coursera-postgresql
     ipAllowList: []
     databaseName: coursera-postgresql
     user: coursera_postgresql_user
 
 services:
   - type: Static Site
-    name: tamaak-acdamy2
+    name: coursera-postgresql
     env: ruby
     buildCommand: "./render-build.sh"
     startCommand: "bundle exec rails s"
