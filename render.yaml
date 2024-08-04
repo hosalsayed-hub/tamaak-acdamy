@@ -8,7 +8,7 @@ services:
   - type: Static Site
     name: coursera-postgresql
     env: ruby
-    buildCommand: "./render-build.sh"
+    buildCommand: "bundle install ;bundle exec rails assets:precompile ;bundle exec rails assets:clean ;bundle exec rails db:migrate"
     startCommand: "bundle exec rails s"
     envVars:
       - key: postgresql://coursera_postgresql_user:eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX@dpg-cqmm6btds78s73918e2g-a.oregon-postgres.render.com/coursera_postgresql
