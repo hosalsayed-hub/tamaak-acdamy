@@ -17,17 +17,13 @@ gem 'tzinfo-data'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
-gem 'katapult', :git => 'git://github.com/makandra/katapult'
+gem 'katapult'
 gem 'webpacker', '=3.0'
 gem 'listen'
-
-  gem 'web-console', '>= 3.3.0'
-  
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-  gem  'aws-sdk-s3'
-
-
+gem 'web-console', '>= 3.3.0'
+gem 'spring'
+gem 'spring-watcher-listen', '~> 2.0.0'
+gem  'aws-sdk-s3'
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
