@@ -10,14 +10,14 @@ User.create!(email: 'admin@gmail.com', password: 'Admin@123', password_confirmat
 User.create!(email: 'hosalsayed@gmail.com', password: 'Hussam@123', password_confirmation: 'Hussam@123')
 User.create!(email: 'abdulla@gmail.com', password: 'Aa@123', password_confirmation: 'Aa@123')
 
-5.times do
+4.times do
   Category.create!([{
     name: Faker::Educator.degree,
     description: Faker::Lorem.paragraph,
   }])
 end
 
-20.times do
+10.times do
   Course.create!([{
     name: Faker::Educator.course_name,
     short_description: Faker::Lorem.paragraph,
@@ -32,7 +32,7 @@ end
   }])
 end
 
-30.times do
+10.times do
   Lesson.create!([{
     name: Faker::Address.unique.city,
     description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
