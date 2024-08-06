@@ -1,6 +1,6 @@
 databases:
   - name:  coursera-postgresql
-    databaseName: coursera-postgresql
+    databaseName: postgresql
     user: coursera_postgresql_user
     plan: free
 
