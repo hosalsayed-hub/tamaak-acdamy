@@ -1,6 +1,5 @@
-#!/usr/bin/env bash
-# exit on error
- rails db:drop
- rails db:create
- rails db:migrate
- rails db:seed
+bundle install
+bundle exec rails assets:precompile
+bundle exec rails assets:clean
+bundle exec rails db:migrate
+bundle exec rails db:seed
