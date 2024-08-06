@@ -2,7 +2,7 @@ databases:
   - name:  coursera-postgresql
     databaseName: postgresql
     user: coursera_postgresql_user
-    plan: free
+    plan: starter
 
 services:
   - type: web
