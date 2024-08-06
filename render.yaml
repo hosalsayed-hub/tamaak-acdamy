@@ -1,15 +1,17 @@
 databases:
-  - name: coursera-postgresql
-    ipAllowList: []
+  - name:  coursera-postgresql
     databaseName: coursera-postgresql
     user: coursera_postgresql_user
+    plan: free
 
 services:
-  - type: Static Site
+  - type: web
     name: coursera-postgresql
-    env: ruby
-    buildCommand: "bundle install ;bundle exec rails assets:precompile ;bundle exec rails assets:clean ;bundle exec rails db:migrate"
-    startCommand: "bundle exec rails s"
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    # preDeployCommand: "bundle exec rails db:migrate" # preDeployCommand only available on paid instance types
+    startCommand: "bundle exec rails server"
     envVars:
       - key: postgresql://coursera_postgresql_user:eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX@dpg-cqmm6btds78s73918e2g-a.oregon-postgres.render.com/coursera_postgresql
         fromDatabase:
@@ -17,3 +19,5 @@ services:
           property: connectionString
       - key: eaf676b0b5ac379c2eca2193c7705edb
         sync: false
+      - key: WEB_CONCURRENCY
+        value: 2 # sensible default
