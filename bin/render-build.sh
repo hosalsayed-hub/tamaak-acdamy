@@ -1,5 +1,5 @@
 bundle install
-bundle exec rails assets:precompile
-bundle exec rails assets:clean
-bundle exec rails db:migrate
-bundle exec rails db:seed
+rails assets:precompile
+rails assets:clean
+rails db:migrate
+rails db:seed
