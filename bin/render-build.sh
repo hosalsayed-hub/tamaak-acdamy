@@ -1,5 +1,5 @@
 bundle install
-rails assets:precompile
-rails assets:clean
-rails db:migrate
-rails db:seed
+./bin/rails assets:precompile
+./bin/rails assets:clean
+./bin/rails db:migrate
+./bin/rails db:seed
