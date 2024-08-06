@@ -5,6 +5,7 @@ ruby '2.6.5'
 gem 'rails', '~> 5.2.3'
 gem 'pg'
 gem 'puma'
+
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
@@ -17,13 +18,15 @@ gem 'tzinfo-data'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
-gem 'katapult'
-gem 'webpacker', '=3.0'
-gem 'listen'
-gem 'web-console', '>= 3.3.0'
-gem 'spring'
-gem 'spring-watcher-listen', '~> 2.0.0'
-gem  'aws-sdk-s3'
+
+group :development do
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem  'aws-sdk-s3'
+end
+
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
