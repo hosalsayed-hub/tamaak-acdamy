@@ -1,5 +1,5 @@
 bundle install
-bundle  exec ./bin/rails db:drop
-bundle  exec ./bin/rails db:create
-bundle  exec ./bin/rails db:migrate --trace
+ ./bin/rails db:drop
+ ./bin/rails db:create
+ ./bin/rails db:migrate --trace
 
