@@ -1,5 +1,5 @@
+bundle install
+bundle  exec ./bin/rails assets:precompile
+bundle  exec ./bin/rails assets:clean
+bundle  exec ./bin/rails db:migrate
 
-./bin/rails assets:precompile
-./bin/rails assets:clean
-./bin/rails db:migrate
-./bin/rails db:seed
