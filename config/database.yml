@@ -1,9 +1,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: dpg-cqmm6btds78s73918e2g-a
-  username: coursera_postgresql_user
-  password: eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX
+  host:postgresql
+  username: postgresql
+  password: Hos$7500
   pool: 5
 
 development:
