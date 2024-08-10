@@ -6,7 +6,7 @@
   }])
 end
 
-4.times do
+2.times do
   Course.create!([{
     name: Faker::Educator.course_name,
     short_description: Faker::Lorem.paragraph,
@@ -26,7 +26,7 @@ end
     name: Faker::Address.unique.city,
     description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
     video_url: "https://www.youtube.com/watch?v=ojXjR33bPOY",
-    course_id: Faker::Number.between(from: 1, to: 4),
+    course_id: Faker::Number.between(from: 1, to: 2),
     row_order: Faker::Number.between(from: -50000, to: 50000),
   }])
 end
@@ -35,7 +35,7 @@ end
   Subscription.create!([{
     rating: Faker::Number.between(from: 1, to: 5),
     comment: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
-    course_id: Faker::Number.between(from: 1, to: 4),
+    course_id: Faker::Number.between(from: 1, to: 2),
     user_id: Faker::Number.between(from: 1, to: 3),
   }])
 end
