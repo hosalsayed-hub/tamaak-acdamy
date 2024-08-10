@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(email: 'admin1@tamak.com', password: 'Adm@123', password_confirmation: 'Adm@123')
-User.create!(email: 'hussam1@tamak.com', password: 'Hussam@123', password_confirmation: 'Hussam@123')
-User.create!(email: 'abdullah1@tamak.com', password: 'Abd@123', password_confirmation: 'Aad@123')
+User.create!(email: 'admin2@tamak.com', password: 'Adm@123', password_confirmation: 'Adm@123')
+User.create!(email: 'hussam2@tamak.com', password: 'Hussam@123', password_confirmation: 'Hussam@123')
+User.create!(email: 'abdullah2@tamak.com', password: 'Abd@123', password_confirmation: 'Aad@123')
 
 4.times do
   Category.create!([{
