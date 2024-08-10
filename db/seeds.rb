@@ -1,6 +1,3 @@
-User.create!(email: 'admin@gmail.com', password: 'Admin@123', password_confirmation: 'Admin@123')
-User.create!(email: 'hosalsayed@gmail.com', password: 'Hussam@123', password_confirmation: 'Hussam@123')
-User.create!(email: 'abdulla@gmail.com', password: 'Aa@123', password_confirmation: 'Aa@123')
 
 4.times do
   Category.create!([{
