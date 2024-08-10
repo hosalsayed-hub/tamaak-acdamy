@@ -1,10 +1,10 @@
 development:
  adapter: postgresql
  encoding: unicode
- database:postgresql
- username: coursera_postgresql_user
- url: postgresql://coursera_postgresql_user:eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX@dpg-cqmm6btds78s73918e2g-a.oregon-postgres.render.com/coursera_postgresql
- password: eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX
+ database: postgresql
+ username: 'coursera_postgresql_user'
+ url: 'postgresql://coursera_postgresql_user:eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX@dpg-cqmm6btds78s73918e2g-a.oregon-postgres.render.com/coursera_postgresql'
+ password: 'eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX'
  pool:  5
 
 test:
@@ -20,7 +20,7 @@ production:
  adapter: postgresql
  encoding: unicode
  database: postgresql
- username: coursera_postgresql_user
- url: postgresql://coursera_postgresql_user:eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX@dpg-cqmm6btds78s73918e2g-a.oregon-postgres.render.com/coursera_postgresql
- password: eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX
+ username: 'coursera_postgresql_user'
+ url: 'postgresql://coursera_postgresql_user:eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX@dpg-cqmm6btds78s73918e2g-a.oregon-postgres.render.com/coursera_postgresql'
+ password: 'eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX'
  pool:  5
