@@ -17,7 +17,7 @@ services:
         fromDatabase:
           name: coursera-postgresql
           property: connectionString
-      - key:  785a0565dc5a344f561152cbb987702e
+      - key:  2b7fa05fb633ba7b750446208b9ef36e
         sync: false
       - key: WEB_CONCURRENCY
         value: 4 # sensible default
