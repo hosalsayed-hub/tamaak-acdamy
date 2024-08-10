@@ -1,19 +1,26 @@
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  username: postgres
-  password: Hos$7500
-  pool: 5
-
 development:
-  <<: *default
-  database: suncalc_development
+ adapter: 'postgresql'
+ encoding: 'unicode'
+ database: 'postgresql'
+ username: 'coursera_postgresql_user'
+ url: 'postgresql://coursera_postgresql_user:eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX@dpg-cqmm6btds78s73918e2g-a.oregon-postgres.render.com/coursera_postgresql'
+ password: 'eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX'
+ pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 test:
-  <<: *default
-  database: suncalc_test
+ adapter: postgresql
+ encoding: unicode
+ database: postgresql
+ username: coursera_postgresql_user
+ url: <%= ENV['internal database'] %>
+ password: <%= ENV['password'] %>
+ pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 production:
-  <<: *default
-  database: coursera_postgresql
+ adapter: 'postgresql'
+ encoding: 'unicode'
+ database: 'postgresql'
+ username: 'coursera_postgresql_user'
+ url: 'postgresql://coursera_postgresql_user:eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX@dpg-cqmm6btds78s73918e2g-a.oregon-postgres.render.com/coursera_postgresql'
+ password: 'eUnn7zpPs2em4bTaj1NAAT7QM9oXDBIX'
+ pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
