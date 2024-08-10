@@ -1,12 +1,12 @@
 
-4.times do
+3.times do
   Category.create!([{
     name: Faker::Educator.degree,
     description: Faker::Lorem.paragraph,
   }])
 end
 
-5.times do
+3.times do
   Course.create!([{
     name: Faker::Educator.course_name,
     short_description: Faker::Lorem.paragraph,
